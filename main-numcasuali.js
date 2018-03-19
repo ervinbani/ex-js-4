@@ -7,13 +7,15 @@ Ogni volta che non si inserisce un numero vietato il punteggio sale di 1.
 A fine ciclo il programma genera il punteggio totale.
 */
 
-//variabile per scegliere il grado di difficolta
-var c = prompt("Inserisci il grado di difficolta");
 var casualnumber = [];
 
 
 //istruzione del programa che sceglie i numeri casuali e li memorizza in un array;
 //in base al grado di difficolta scelta dall'utente
+
+//variabile per scegliere il grado di difficolta
+
+var c = prompt("Inserisci il grado di difficolta");
 
 if(c==0){
   for(var i=0;i<16;i++){
