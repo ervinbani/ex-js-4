@@ -32,8 +32,10 @@ else if (c==2) {
   }
 }
 else {
-  alert("Scelta sbagliate, inserisci un numero che sia , 0 , 1 , o 2.");
+  alert("Scelta sbagliata, inserisci un numero che sia , 0 , 1 , o 2.");
+
 }
+
 alert(casualnumber);
 
 var punteggio=0;
@@ -41,16 +43,20 @@ var punteggio=0;
 //ciclo do while che si ripete finche l'utente inserisce un numero
 //uguale a uno dei numeri vietati, e stampa il punteggio finale
 
+var control=false;
 do {
-  var inputNumber= prompt("inserisci un numero da 1 a 10 compresi:");
+var inputNumber= prompt("inserisci un numero:");
+
+
   for(var i=0; i<16; i++){
-    if(inputNumber!=casualnumber[i]){
-      punteggio++;
+    if((inputNumber==casualnumber[i])){
+      control=true;
     }
+  }
+  if(control==false){
+    punteggio++;
   }
 
 
-
-} while (inputNumber==casualnumber[i]);
-
+} while (control==false);
 document.write("fine del gioco , punteggio = ", + punteggio);
